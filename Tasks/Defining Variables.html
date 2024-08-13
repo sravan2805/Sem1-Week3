@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables Example</title>
+    <style>
+        /* Define CSS Variables */
+        :root {
+            /* Colors */
+            --primary-color: #3498db; /* Primary Blue */
+            --secondary-color: #2ecc71; /* Secondary Green */
+            --accent-color: #e74c3c; /* Accent Red */
+
+            /* Font Sizes */
+            --base-font-size: 16px; /* Base font size for body text */
+            --heading-font-size: 24px; /* Font size for headings */
+
+            /* Spacing */
+            --padding: 16px; /* General padding */
+            --margin: 16px; /* General margin */
+        }
+
+        /* Example Styles */
+        body {
+            font-size: var(--base-font-size);
+            margin: 0;
+            padding: var(--padding);
+            background-color: var(--secondary-color);
+            color: #fff;
+        }
+
+        h1 {
+            font-size: var(--heading-font-size);
+            color: var(--primary-color);
+            margin-bottom: var(--margin);
+        }
+
+        .container {
+            padding: var(--padding);
+            margin: var(--margin);
+            background-color: var(--accent-color);
+            border-radius: 8px;
+        }
+
+        .button {
+            padding: var(--padding);
+            margin: var(--margin);
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: var(--base-font-size);
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Website</h1>
+    <div class="container">
+        <p>This is a container with some text inside it. It uses CSS variables for styling.</p>
+        <button class="button">Click Me</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Grid Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+                "header header"
+                "main1 main2"
+                "footer footer";
+            gap: 20px;
+            min-height: 100vh;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .main1 {
+            grid-area: main1;
+            background-color: #dc13b0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .main2 {
+            grid-area: main2;
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            gap: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(241, 7, 218, 0.905);
+        }
+
+        .sub-grid-item {
+            background-color: #1887e1;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                    "header"
+                    "main1"
+                    "main2"
+                    "footer";
+            }
+
+            .main2 {
+                grid-template-rows: auto;
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <header>
+            <h1>Header</h1>
+        </header>
+
+        <div class="main1">
+            <h2>Main Section 1</h2>
+            <p>This is the first main section. It occupies the left side of the grid on larger screens.</p>
+        </div>
+
+        <div class="main2">
+            <div class="sub-grid-item">
+                <h2>Sub-Grid Item 1</h2>
+                <p>This is a sub-grid item within the second main section.</p>
+            </div>
+            <div class="sub-grid-item">
+                <h2>Sub-Grid Item 2</h2>
+                <p>This is another sub-grid item within the second main section.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Footer</p>
+        </footer>
+    </div>
+</body>
+</html>

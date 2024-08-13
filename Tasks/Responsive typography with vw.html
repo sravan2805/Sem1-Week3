@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Typography</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 8vw; /* Adjusts the font size based on viewport width */
+            color: #007bff;
+            margin: 0;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 12vw; /* Increases font size for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Heading</h1>
+</body>
+</html>

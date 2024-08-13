@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid Card Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 400px;
+            height: 300px;
+            display: block;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .card-description {
+            font-size: 1em;
+            color: #666;
+        }
+
+        @media (min-width: 600px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 900px) {
+            .grid-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="card">
+            <img src="https://th.bing.com/th/id/R.537bc6e516f1ff9912d78fbf30b8fa23?rik=jsxhRNOY6R6YZg&riu=http%3a%2f%2fappsgeyser.com%2fimg%2ficon_webApp.png&ehk=ToCEoIFYS%2fEJZRyNxGNIn6%2b5Ss3MW1PoKZkONDxjZf0%3d&risl=&pid=ImgRaw&r=0" alt="Card Image 1">
+            <div class="card-content">
+                <h2 class="card-title">Html</h2>
+                <p class="card-description">Html is the structure of website.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://1000logos.net/wp-content/uploads/2020/09/CSS-Logo.png" alt="Card Image 2">
+            <div class="card-content">
+                <h2 class="card-title">Css</h2>
+                <p class="card-description">Css is used to style the website.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://th.bing.com/th/id/R.0349998e26306c9bd68c3fd554453cb6?rik=CsJD4oMmU%2f8PGw&riu=http%3a%2f%2fpluspng.com%2fimg-png%2flogo-javascript-png--784.png&ehk=e%2f8crq8mmCNuf0GbM5uH2n0Fd0HKI%2f%2bQDt7wWatvXjE%3d&risl=&pid=ImgRaw&r=0" alt="Card Image 3">
+            <div class="card-content">
+                <h2 class="card-title">Javascript</h2>
+                <p class="card-description">Javascript is used to add movement to the website.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://www.majnooncomputer.net/wp-content/uploads/2022/01/FigmaLogo.jpg" alt="Card Image 4">
+            <div class="card-content">
+                <h2 class="card-title">Figma</h2>
+                <p class="card-description">figma is a frontend technology used to create beautiful webpages with creativity.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.BAwJnB3maWaRiZsXTXTmcwHaEK?rs=1&pid=ImgDetMain" alt="Card Image 5">
+            <div class="card-content">
+                <h2 class="card-title">React</h2>
+                <p class="card-description">React is a frontend technology used to create webpages with more accurately.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://d6f6d0kpz0gyr.cloudfront.net/uploads/images/_1200x630_crop_center-center_82_none/tailwind-thumb.jpg?mtime=20210104144959&focal=none&tmtime=20210104145035" alt="Card Image 6">
+            <div class="card-content">
+                <h2 class="card-title">Tailwind Css</h2>
+                <p class="card-description">Tailwind is a front technology used to create webpages with different colours.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

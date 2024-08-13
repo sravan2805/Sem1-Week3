@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Card Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: calc(33.333% - 20px);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .card-description {
+            font-size: 1em;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card">
+            <img src="https://th.bing.com/th/id/R.537bc6e516f1ff9912d78fbf30b8fa23?rik=jsxhRNOY6R6YZg&riu=http%3a%2f%2fappsgeyser.com%2fimg%2ficon_webApp.png&ehk=ToCEoIFYS%2fEJZRyNxGNIn6%2b5Ss3MW1PoKZkONDxjZf0%3d&risl=&pid=ImgRaw&r=0" alt="Card Image">
+            <div class="card-content">
+                <h2 class="card-title">Html</h2>
+                <p class="card-description">Html is the structure of website.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://1000logos.net/wp-content/uploads/2020/09/CSS-Logo.png" alt="Card Image">
+            <div class="card-content">
+                <h2 class="card-title">CSS</h2>
+                <p class="card-description">Css is used to style the website.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://th.bing.com/th/id/R.0349998e26306c9bd68c3fd554453cb6?rik=CsJD4oMmU%2f8PGw&riu=http%3a%2f%2fpluspng.com%2fimg-png%2flogo-javascript-png--784.png&ehk=e%2f8crq8mmCNuf0GbM5uH2n0Fd0HKI%2f%2bQDt7wWatvXjE%3d&risl=&pid=ImgRaw&r=0" alt="Card Image">
+            <div class="card-content">
+                <h2 class="card-title">Javascript</h2>
+                <p class="card-description">Javascript is used to add movement to the website.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://www.majnooncomputer.net/wp-content/uploads/2022/01/FigmaLogo.jpg" alt="Card Image">
+            <div class="card-content">
+                <h2 class="card-title">Figma</h2>
+                <p class="card-description">figma is a frontend technology used to create beautiful webpages with creativity</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.BAwJnB3maWaRiZsXTXTmcwHaEK?rs=1&pid=ImgDetMain" alt="Card Image">
+            <div class="card-content">
+                <h2 class="card-title">React</h2>
+                <p class="card-description">React is a frontend technology used to create webpages with more accurately</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

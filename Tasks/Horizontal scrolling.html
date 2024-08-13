@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Scrolling Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .scroll-container {
+            width: 400px;
+            border: 2px solid #000;
+            overflow-x: scroll;
+            white-space: nowrap;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+
+        .item {
+            display: inline-block;
+            width: 150px;
+            height: 200px;
+            margin-right: 10px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+        <div class="item">Item 7</div>
+    </div>
+</body>
+</html>

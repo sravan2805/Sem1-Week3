@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template Areas Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas: 
+                "header header header"
+                "sidebar main main"
+                "footer footer footer";
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 200px 1fr 1fr;
+            gap: 20px;
+            min-height: 100vh;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #2189cf;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .main-content {
+            grid-area: main;
+            background-color: #cb0b71;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-areas: 
+                    "header"
+                    "main"
+                    "sidebar"
+                    "footer";
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <header>
+            <h1>Header</h1>
+        </header>
+
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+            <p>This is the sidebar section. It contains navigation or other auxiliary content.</p>
+        </div>
+
+        <div class="main-content">
+            <h2>Main Content</h2>
+            <p>This is the main content area. It occupies the largest portion of the layout.</p>
+        </div>
+
+        <footer>
+            <p>Footer</p>
+        </footer>
+    </div>
+</body>
+</html>

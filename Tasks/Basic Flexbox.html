@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #3dd742;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .content {
+            display: flex;
+            flex: 1;
+            padding: 10px;
+            justify-content: space-between;
+        }
+        .column {
+            background-color: #188fbd;
+            padding: 20px;
+            flex: 1;
+            margin: 5px;
+            text-align: center;
+        }
+        footer {
+            background-color: #2ce332;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Header</h1>
+    </header>
+    <main class="content">
+        <div class="column">
+            Column 1
+            <h1>Frontend</h1>
+        </div>
+        <div class="column">
+            Column 2
+            <h1>Backend</h1>
+        </div>
+        <div class="column">
+            Column 3
+            <h1>DSA</h1>
+        </div>
+    </main>
+    <footer>
+        <p>Footer</p>
+    </footer>
+</body>
+</html>
